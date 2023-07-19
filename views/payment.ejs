@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet" />
+    <style>
+        h4 {
+            padding-bottom: 5px;
+            color: rgb(187, 128, 255)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container border" style="margin-top: 10rem; width: 500px;">
+        <h2 style="background-color: #fcfcfc; color: rgb(187, 128, 255); text-align: center;">Payment Form</h2>
+        <h4>Account</h4>
+        <form action="/payment/orderconfirm" method="post">
+            <div class="container d-flex" style="position: relative;">
+                <input type="text" value="<%=data1[0].quantity %>" name="quantity" hidden>
+                <input type="text" value="<%=data1[0].productId %>" name="productId" hidden>
+                <div class="input-box">
+                    <input type="email" placeholder="Email Adress" required class="name">
+                    <i class="fa fa-envelope icon"></i>
+                </div>
+                <div class="input-box">`
+                    <input type="text" value="<%= data %>" readonly="readonly" class="name">
+                    <i class="fa fa-envelope icon"></i>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="container d-flex">
+                    <div class="input-box">
+                        <h4>Payment
+                            Details</h4>
+                        <input type="radio" name="pay" id="bc1" value='creditCard' checked class="radio">
+                        <label for="bc1"><span><i class="fa fa-cc-visa"></i> Credit Card</span></label>
+                        <input type="radio" name="pay" id="bc2" value="paypal" class="radio">
+                        <label for="bc2"><span><i class="fa fa-cc-paypal"></i> Paypal</span></label>
+                    </div>
+                </div>
+                <div class="container d-flex">
+                    <div class="input-box">
+                        <input type="tel" placeholder="Card Number" maxlength="15" required class="name">
+                        <i class="fa fa-credit-card icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Card CVC" maxlength="3" required class="name">
+                        <i class="fa fa-user icon"></i>
+                    </div>
+                </div>
+                <br>
+                <div class="input-group">
+                    <div class="input-box " style="width: 100%;">
+                        <button type="submit" style="width: 100%; background-color: #fcfcfc;">pay
+                            Now</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "sumit",
+    "database": "ecom",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "**your_username**",
+    "password": "****your_password****",
+    "database": "***db_Schema***",
+    "host": "**host**",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "**your_username**",
+    "password": "****your_password****",
+    "database": "***db_Schema***",
+    "host": "**host**",
+    "dialect": "mysql"
+  }
+}

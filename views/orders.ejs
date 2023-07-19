@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>orders</title>
+</head>
+<%- include ("partials/navbar")%>
+
+    <body onload="getproduct()">
+        <div class="payment">
+            <div class="container">
+                <% if(data.length==0 ) {%>
+                    <div class="container">
+                        <h1>no orders yet</h1>
+
+                    </div>
+                    <%}else{ %>
+                        <div class="row">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Product</th>
+                                            <th>Price</th>
+                                            <th>Qty</th>
+                                            <th>Amount</th>
+                                            <th>OrderStatus</th>
+                                            <th>Payment Mode </th>
+                                        </tr>
+                                    </thead>
+                                    <% for (let i=0; i < data.length; i++){ %>
+                                        <tbody>
+
+                                            <td>
+                                                <%=i+1 %>
+                                            </td>
+                                            <td><a href="/products/productdetails/<%= data[i].productId %>">product</a>
+                                            </td>
+                                            <td>
+                                                <%= data[i].totalPrice %>
+                                            </td>
+                                            <td>
+                                                <%= data[i].quantity %>
+                                            </td>
+                                            <td>
+                                                <%= data[i].totalPrice %>
+                                            </td>
+                                            <td>
+                                                <%= data[i].orderstatus %>
+                                            </td>
+                                            <td>
+                                                <%= data[i].paymentmode %>
+                                            </td>
+                                        </tbody>
+                                        <% } %>
+                                </table>
+                            </div>
+                        </div>
+                        <% } %>
+            </div>
+        </div>
+    </body>
+    <%- include ("partials/footer")%>
+
+</html>

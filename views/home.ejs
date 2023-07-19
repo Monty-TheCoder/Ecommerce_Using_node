@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> -->
+    <style>
+        .home {
+            width: 100%;
+            height: 100vh;
+            background-color: #04292e;
+            color: #fff;
+            padding-top: 100px;
+        }
+
+        .home h1 {
+            font-size: 45px;
+        }
+
+        .home h1 span {
+            color: rgb(7, 170, 7);
+            font-weight: 600;
+        }
+
+        .home p {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<%- include ("partials/navbar")%>
+
+    <body>
+        <div class="home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-12 mb-3 mx-auto">
+                        <h1>Welcome to <span>Attire.Com</span> </h1>
+                        <p>It's a Big Market out there, Let's Explore with Us.
+                            We always make our costomer happy by providing as many choices as possible. Get Your FREE
+                            Shopping Website ,We turn all brands like Yours, </p>
+                        <p>Happy Shopping!</p>
+                        <button class="btn btn-outline-success">Read More</button>
+                    </div>
+                    <div class="col-md-6 col-12 mb-3 mx-auto">
+                        <%- include ("partials/slides")%>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="desc h-100">
+            <div class="container-fluid">
+                <div class="row">
+                    <div
+                        class=" col-md-6 col-12 mx-auto mb-3 d-flex justify-content-center align-items-center flex-column">
+                        <h1>Welcome to <span>AttireFashion.Com</span> </h1>
+                        <h3>It's a Big Market out there, Let's Explore with Us</h3>
+                        <p> Just take a quick peek & learn about the Amazing Stories of our Valued Clients. Nothing
+                            makes us happier than their Beautiful & Successful Journey with Us!</p>
+                        <button class="btn btn-outline-success">Read More</button>
+                    </div>
+                    <div class="col-md-6 col-12 mx-auto mb-3 ">
+                        <img src="/T4.png" class="img-fluid side-img h-100" alt="ok" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class='bg-info brand h-100'>
+            <div class="row ">
+                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 p-4">
+                    <div class="card">
+                        <div class="bg-image hover-zoom ripple rounded ripple-surface">
+                            <img src="/adidas.png" class='card-img-top p-img p-5' alt="okokok" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 p-4">
+                    <div class="card">
+                        <div class="bg-image hover-zoom ripple rounded ripple-surface">
+                            <img src="/puma.png" class='card-img-top p-img p-5' alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 p-4">
+                    <div class="card">
+                        <div class="bg-image hover-zoom ripple rounded ripple-surface">
+                            <img src="/nike.png" class='card-img-top p-img p-5' alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 p-4">
+                    <div class="card">
+                        <div class="bg-image hover-zoom ripple rounded ripple-surface">
+                            <img src="/bata.png" class='card-img-top p-img p-5' alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </body>
+    <%- include ("partials/footer")%>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+</html>

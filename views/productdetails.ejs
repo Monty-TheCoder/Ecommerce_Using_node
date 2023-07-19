@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<%- include ("partials/navbar")%>
+
+    <body>
+        <section style=' background-color: "#eee" '>
+            <div class="container py-5">
+                <div class="row justify-content-center mb-3">
+                    <div class="col-md-12 col-xl-10">
+                        <div class="details">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-5 col-sm-2 col-12 mx-auto mb-3">
+                                        <img src='/<%= data.pimage %>' alt="pimage" class="img-fluid p-im" />
+                                    </div>
+                                    <div class="col-md-6 col-12 mx-auto mb-3 d-flex  flex-column mt-5">
+                                        <h2>
+                                            <%= data.pname %>
+                                                <%= data.gender %>
+                                        </h2>
+                                        <h4>Price : <strong>
+                                                <%= data.price %> .00
+                                            </strong> </h4>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quisquam
+                                            quae ex
+                                            maiores possimus nihil eum assumenda asperiores! Autem maxime incidunt
+                                            voluptatibus quidem quaerat corrupti ex natus sed mollitia modi.</p>
+                                        <form action="/cart/add/<%= data.id %>" method="post">
+                                            <input type="hidden" value='<%= data.id %>' />
+                                            <div class="form-group d-flex">
+                                                <label for="sel1">Choose Qty:</label>
+                                                <select class="form-control" name="qty"
+                                                    style="width: 10%; height: 30px;" id="" required>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                </select>&nbsp;
+                                                <label for="sel1">Size:</label>
+                                                <select class="form-control" style="width: 12%; height: 30px;" id=""
+                                                    required>
+                                                    <option value="S">S</option>
+                                                    <option value="L">L</option>
+                                                    <option value="M">M</option>
+                                                    <option value="XL">XL</option>
+                                                    <option value="XXL">XXL</option>
+                                                    <option value="XXXL">XXXL</option>
+                                                </select>
+                                            </div>
+                                            <br>
+                                            <div class="text-left">
+                                                <button onclick="alert('added to cart')" class="btn bg-info"
+                                                    type="submit"> add to cart</button>
+                                                <!-- <a href="/cart/add/<%= data.id %>" class="btn bg-info">add
+                                                    to cart
+                                                </a>&nbsp; -->
+                                                <a href="/wishlist/add/<%= data.id %>"
+                                                    onclick="alert('added to wishlist')" class="btn btn-info">add to
+                                                    wishlist
+                                                </a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </body>
+    <%- include ("partials/footer")%>
+
+</html>
